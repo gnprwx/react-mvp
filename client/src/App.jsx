@@ -1,16 +1,18 @@
+import Form from "./Form";
+import Spotify from "./Spotify";
 import { useState } from "react";
 
 function App() {
-	const [count, setCount] = useState(0);
-
+	const formSubmission = () => {
+		//send db info
+	};
 	return (
 		<>
-			<p className="text-5xl">Songification</p>
-			<div>
-				<button className="bg-slate-500 rounded p-3 m-2" onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-			</div>
+			<p className="bg-slate-700 text-slate-200 text-5xl text-center p-5">
+				Songification
+			</p>
+			<Form formSubmission={formSubmission}/>
+			<Spotify/>
 		</>
 	);
 }
