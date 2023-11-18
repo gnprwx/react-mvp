@@ -9,8 +9,13 @@ await client.connect();
 
 app.use(express.json());
 
-app.get("/api", (req, res) => {
-	console.log("Testing!");
+app.get("/api/songs", (req, res) => {
+	client.query("SELECT * FROM songs").then((data) => res.send(data.rows));
+});
+
+app.post("/api/songs", (req, res) => {
+	const { url, text } = req.body;
+	client.query(`INSERT INTO songs(url,text)VALUES(${url},${text})`);
 	res.send();
 });
 
