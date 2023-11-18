@@ -16,13 +16,20 @@ app.get("/api/songs", (_, res, next) => {
 		.catch(next);
 });
 
-app.post("/api/songs", (req, res, next) => {
+const postSongs = async (req, res, next) => {
 	const { url, text } = req.body;
-	client
-		.query(`INSERT INTO songs(url,text) VALUES($1, $2)`, [url, text])
-		.catch(next);
-	res.sendStatus(201);
-});
+	try {
+		await client.query(`INSERT INTO songs(url,text) VALUES($1, $2)`, [
+			url,
+			text,
+		]);
+		res.sendStatus(201);
+	} catch (error) {
+		next(error);
+	}
+};
+
+app.post("/api/songs", postSongs);
 
 app.use((_, res) => {
 	res.sendStatus(404);
