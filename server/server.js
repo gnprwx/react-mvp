@@ -15,8 +15,11 @@ app.get("/api/songs", (req, res) => {
 
 app.post("/api/songs", (req, res) => {
 	const { url, text } = req.body;
-	client.query(`INSERT INTO songs(url,text)VALUES(${url},${text})`);
-	res.send();
+	client.query(`INSERT INTO songs(url,text) VALUES($1, $2) RETURNING *`, [
+		url,
+		text,
+	]);
+	res.sendStatus(201);
 });
 
 app.listen(PORT, () => {
