@@ -1,15 +1,19 @@
-const Form = ({ formSubmission }) => {
+const Form = ({ onClickSubmission }) => {
 	return (
 		<div className="bg-slate-500 p-5">
-			<form className="mx-auto w-96 flex flex-col" onSubmit={formSubmission}>
-				<label className="text-slate-100" htmlFor="spotify">spotify url:</label>
+			<form className="mx-auto w-96 flex flex-col" onSubmit={onClickSubmission}>
+				<label className="text-slate-100" htmlFor="spotify">
+					spotify url:
+				</label>
 				<input
 					className="border border-slate-800 border-2 rounded mb-4 bg-slate-300"
 					type="text"
 					name="spotify"
 					id="spotify"
 				/>
-				<label className="text-slate-100" htmlFor="recommendation">why do you recommend this song?</label>
+				<label className="text-slate-100" htmlFor="recommendation">
+					why do you recommend this song?
+				</label>
 				<textarea
 					className="border border-slate-800 bg-slate-300 border-2 rounded"
 					name="recommendation"
