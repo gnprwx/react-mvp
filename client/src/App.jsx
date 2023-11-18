@@ -7,9 +7,10 @@ function App() {
 	const [songs, setSongs] = useState([]);
 	const formSubmission = async (e) => {
 		e.preventDefault();
-		let url = e.target[0].value;
+		let url = e.target[0].value.slice(31, 53); //fixed 22 char UUID
 		let text = e.target[1].value;
 		await axios.post("api/songs", { url, text });
+    fetchSongs();
 		url = "";
 		text = "";
 	};
@@ -25,10 +26,10 @@ function App() {
 
 	useEffect(() => {
 		fetchSongs();
-	}, [formSubmission]);
+	}, []);
 
 	return (
-		<div className="min-h-screen bg-slate-900">
+		<div className="min-h-screen bg-slate-400">
 			<p className="bg-slate-700 text-slate-200 text-5xl text-center p-5">
 				Songification
 			</p>
