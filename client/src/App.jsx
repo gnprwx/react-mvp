@@ -7,16 +7,26 @@ import { useEffect, useState } from "react";
 function App() {
 	const [songs, setSongs] = useState([]);
 	const [err, setErr] = useState(false);
+	const [urlValue, setUrlValue] = useState("");
+	const [textValue, setTextValue] = useState("");
+
+	const handleUrlInputChange = (e) => {
+		setUrlValue(e.target.value);
+	};
+
+	const handleTextInputChange = (e) => {
+		setTextValue(e.target.value);
+	};
 
 	const formSubmission = async (e) => {
 		e.preventDefault();
-		let url = e.target[0].value.slice(31, 53); //fixed 22 char UUID
-		let text = e.target[1].value;
+		let url = urlValue.slice(31, 53);
+		let text = textValue;
 		try {
 			await axios.post("api/songs", { url, text });
 			fetchSongs();
-			url = "";
-			text = "";
+			setUrlValue("");
+			setTextValue("");
 			setErr(false);
 		} catch (error) {
 			setErr(true);
@@ -50,6 +60,10 @@ function App() {
 					onClickSubmission={formSubmission}
 					error={err}
 					handleOnError={handleOnError}
+					urlValue={urlValue}
+					textValue={textValue}
+					handleTextInputChange={handleTextInputChange}
+					handleUrlInputChange={handleUrlInputChange}
 				/>
 				<Directions />
 			</div>

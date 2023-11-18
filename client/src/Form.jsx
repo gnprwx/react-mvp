@@ -1,5 +1,13 @@
 import Error from "./Error";
-const Form = ({ onClickSubmission, error, handleOnError }) => {
+const Form = ({
+	onClickSubmission,
+	error,
+	handleOnError,
+	urlValue,
+	textValue,
+	handleUrlInputChange,
+	handleTextInputChange,
+}) => {
 	return (
 		<div className="bg-slate-500 shadow-xl rounded p-5">
 			<form
@@ -15,6 +23,8 @@ const Form = ({ onClickSubmission, error, handleOnError }) => {
 					name="spotify"
 					id="spotify"
 					pattern="https:\/\/open\.spotify\.com\/track\/[A-Za-z0-9]+\?si=([A-Za-z0-9]+)"
+					onChange={handleUrlInputChange}
+					value={urlValue}
 					required
 				/>
 				<label className="text-slate-100" htmlFor="recommendation">
@@ -27,6 +37,8 @@ const Form = ({ onClickSubmission, error, handleOnError }) => {
 					cols="30"
 					rows="3"
 					maxLength={80}
+					onChange={handleTextInputChange}
+					value={textValue}
 					required
 					style={{ resize: "none" }}
 				></textarea>
