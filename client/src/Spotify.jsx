@@ -15,12 +15,13 @@ const Spotify = () => {
 	];
 	//state uri submission needs to be passed down to here to utilize for id attribute
 	return (
-		<div>
+		<div className="grid grid-cols-3 gap-4 p-5">
 			{submission.map((song) => {
 				return (
-					<>
-						<Widget id={song.id} songID={song.url} /> <Recommend text={song.text} />
-					</>
+					<div>
+						<Widget id={song.id} songID={song.url} />{" "}
+						<Recommend text={song.text} />
+					</div>
 				);
 			})}
 		</div>
