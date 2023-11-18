@@ -1,10 +1,8 @@
-import axios from "axios";
 import Widget from "./Widget";
 import Recommend from "./Recommend";
-const Spotify = ({songs}) => {
-
+const Spotify = ({ songs }) => {
 	return (
-		<div className="grid grid-cols-3 gap-4 p-5">
+		<div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-10">
 			{songs.map((song) => {
 				return (
 					<div key={song.id}>
