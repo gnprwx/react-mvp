@@ -1,7 +1,11 @@
-const Form = ({ onClickSubmission }) => {
+import Error from "./Error";
+const Form = ({ onClickSubmission, error, handleOnError }) => {
 	return (
 		<div className="bg-slate-500 shadow-xl rounded p-5">
-			<form className="mx-auto w-96 flex flex-col" onSubmit={onClickSubmission}>
+			<form
+				className="mx-auto lg:w-96 flex flex-col"
+				onSubmit={onClickSubmission}
+			>
 				<label className="text-slate-100" htmlFor="spotify">
 					spotify url:
 				</label>
@@ -27,11 +31,12 @@ const Form = ({ onClickSubmission }) => {
 					style={{ resize: "none" }}
 				></textarea>
 				<button
-					className="mx-auto w-1/3 bg-slate-200 text-slate-900 font-bold shadow-lg rounded mt-2"
+					className="mx-auto sm:w-1/3 bg-slate-200 text-slate-900 font-bold shadow-lg rounded mt-2 p-1"
 					type="submit"
 				>
 					Submit Song
 				</button>
+				<Error error={error} handleOnError={handleOnError} />
 			</form>
 		</div>
 	);
