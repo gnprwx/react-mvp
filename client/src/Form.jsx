@@ -10,16 +10,20 @@ const Form = ({ onClickSubmission }) => {
 					type="text"
 					name="spotify"
 					id="spotify"
+					pattern="https:\/\/open\.spotify\.com\/track\/[A-Za-z0-9]+\?si=([A-Za-z0-9]+)"
+					required
 				/>
 				<label className="text-slate-100" htmlFor="recommendation">
-					why do you recommend this song?
+					describe song:
 				</label>
 				<textarea
 					className="border border-slate-800 bg-slate-300 border-2 rounded"
 					name="recommendation"
 					id="recommendation"
 					cols="30"
-					rows="5"
+					rows="3"
+					maxLength={80}
+					required
 					style={{ resize: "none" }}
 				></textarea>
 				<button
