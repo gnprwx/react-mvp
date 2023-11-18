@@ -1,17 +1,17 @@
 const Form = ({ formSubmission }) => {
 	return (
-		<div className="bg-slate-800 text-slate-200 p-5">
+		<div className="bg-slate-500 p-5">
 			<form className="mx-auto w-96 flex flex-col" onSubmit={formSubmission}>
-				<label htmlFor="spotify">spotify url:</label>
+				<label className="text-slate-100" htmlFor="spotify">spotify url:</label>
 				<input
-					className="border border-slate-800 rounded"
+					className="border border-slate-800 border-2 rounded mb-4 bg-slate-300"
 					type="text"
 					name="spotify"
 					id="spotify"
 				/>
-				<label htmlFor="recommendation">why do you recommend this song?</label>
+				<label className="text-slate-100" htmlFor="recommendation">why do you recommend this song?</label>
 				<textarea
-					className="border border-slate-800 rounded"
+					className="border border-slate-800 bg-slate-300 border-2 rounded"
 					name="recommendation"
 					id="recommendation"
 					cols="30"
@@ -19,7 +19,7 @@ const Form = ({ formSubmission }) => {
 					style={{ resize: "none" }}
 				></textarea>
 				<button
-					className="mx-auto w-1/2 bg-slate-500 rounded mt-2"
+					className="mx-auto w-1/3 bg-slate-200 text-slate-900 font-bold shadow-lg rounded mt-2"
 					type="submit"
 				>
 					Submit Song
