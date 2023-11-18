@@ -1,6 +1,6 @@
 const Form = ({ onClickSubmission }) => {
 	return (
-		<div className="bg-slate-500 p-5">
+		<div className="bg-slate-500 shadow-xl rounded p-5">
 			<form className="mx-auto w-96 flex flex-col" onSubmit={onClickSubmission}>
 				<label className="text-slate-100" htmlFor="spotify">
 					spotify url:
