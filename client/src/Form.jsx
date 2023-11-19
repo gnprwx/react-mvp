@@ -11,7 +11,7 @@ const Form = ({
 	return (
 		<div>
 			<form
-				className="mx-auto lg:w-full flex flex-col sm:w-3/4"
+				className="mx-auto 2xl:w-1/3 lg:w-3/4 flex flex-col sm:w-3/4"
 				onSubmit={onClickSubmission}
 			>
 				<label
@@ -21,7 +21,7 @@ const Form = ({
 					spotify song url:
 				</label>
 				<input
-					className="p-2.5 w-full text-sm text-gray-900 bg-slate-900 border-4 border-slate-300 placeholder-gray-300 text-white mb-2"
+					className="p-2.5 w-full text-sm text-gray-900 bg-indigo-950 border-4 border-indigo-300 placeholder-gray-300 text-white rounded mb-2"
           placeholder="https://open.spotify.com/track/1F7wq8a3kwwRH2TiHB0I42?si=6e13e41242704a35"
 					type="text"
 					name="spotify"
@@ -38,7 +38,7 @@ const Form = ({
 					describe recommendation:
 				</label>
 				<textarea
-					className="p-2.5 w-full text-sm text-gray-900 bg-slate-900 border-4 border-slate-300 placeholder-gray-300 text-white mb-2"
+					className="p-2.5 w-full text-sm text-gray-900 bg-indigo-950 border-4 border-indigo-300 placeholder-gray-300 text-white rounded mb-2"
 					placeholder="This song is dark and moody..."
 					name="recommendation"
 					id="recommendation"
@@ -51,7 +51,7 @@ const Form = ({
 					style={{ resize: "none" }}
 				/>
 				<button
-					className="mx-auto sm:w-1/3 bg-slate-700 text-slate-300 font-bold border-4 border-slate-300 shadow-lg mt-2 p-1"
+					className="mx-auto sm:w-1/3 bg-indigo-500/70 text-indigo-100 font-bold border-4 border-indigo-300 shadow-lg rounded mt-2 p-1"
 					type="submit"
 				>
 					Submit Song

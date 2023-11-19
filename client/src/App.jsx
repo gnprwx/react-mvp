@@ -51,20 +51,20 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-[100dvh] max-w-7xl mx-auto">
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-10 pt-5">
-      <img src={logo} alt="logo" className="w-1/2 mx-auto my-auto" />
-        <Form
-          onClickSubmission={formSubmission}
-          error={err}
-          handleOnError={handleOnError}
-          urlValue={urlValue}
-          textValue={textValue}
-          handleTextInputChange={handleTextInputChange}
-          handleUrlInputChange={handleUrlInputChange}
-        />
-      </div>
-         <div className="pt-5 mx-10">
+		<div className="min-h-[100dvh] mx-auto bg-indigo-950/70">
+			<div className="grid grid-cols-1 2xl:grid-cols-1 lg:grid-cols-2 gap-10 px-10 py-5 bg-indigo-900 items-center border-b-2 border-indigo-500 shadow-lg shadow-indigo-500/40">
+				<img src={logo} alt="logo" className="w-96 mx-auto" />
+				<Form
+					onClickSubmission={formSubmission}
+					error={err}
+					handleOnError={handleOnError}
+					urlValue={urlValue}
+					textValue={textValue}
+					handleTextInputChange={handleTextInputChange}
+					handleUrlInputChange={handleUrlInputChange}
+				/>
+			</div>
+			<div className="pt-5 mx-10 max-w-7xl mx-auto">
 				<Spotify songs={songs} />
 			</div>
 		</div>
