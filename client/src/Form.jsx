@@ -15,7 +15,7 @@ const Form = ({
 				onSubmit={onClickSubmission}
 			>
 				<label
-					className="block mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
+					className="block font-bold mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
 					htmlFor="spotify"
 				>
 					spotify song url:
@@ -32,13 +32,13 @@ const Form = ({
 					required
 				/>
 				<label
-					className="block mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
+					className="block font-bold mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
 					htmlFor="recommendation"
 				>
-					describe recommendation:
+					short description:
 				</label>
 				<textarea
-					className="p-2.5 w-full text-sm text-gray-900 bg-indigo-950 border-4 border-indigo-300 placeholder-gray-300 text-white rounded mb-2"
+					className="p-2.5 w-full text-gray-900 bg-indigo-950 border-4 border-indigo-300 placeholder-gray-300 text-white rounded mb-2"
 					placeholder="This song is dark and moody..."
 					name="recommendation"
 					id="recommendation"
