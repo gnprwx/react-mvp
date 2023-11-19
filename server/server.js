@@ -20,8 +20,8 @@ const getSongs = async (_, res, next) => {
 };
 
 const postSongs = async (req, res, next) => {
-  try {
-    const { url, text } = req.body;
+	try {
+		const { url, text } = req.body;
 		await client.query(`INSERT INTO songs(url,text) VALUES($1, $2)`, [
 			url,
 			text,
@@ -40,8 +40,8 @@ app.use((_, res) => {
 });
 
 app.use((err, req, res, next) => {
-	console.log(err);
 	res.sendStatus(500);
+	throw err;
 });
 
 app.listen(PORT, () => {
