@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
-import Directions from "./Directions";
-import { useEffect, useState } from "react";
+import bgImage from "./assets/bg.png";
+import songBG from "./assets/song-bg.png";
+import logo from "./assets/logo.png";
 
 function App() {
 	const [songs, setSongs] = useState([]);
@@ -51,11 +53,12 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-[100dvh] bg-slate-900">
-			<p className="bg-slate-700 text-slate-200 text-5xl text-center p-5">
-				Songification
-			</p>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 py-5 bg-slate-400 rounded-xl mx-10 mt-5">
+		<div className="min-h-[100dvh]">
+			<img src={logo} alt="logo" className="w-96 mx-auto m-2" />
+			<div
+				className="gap-10 px-10 py-10 rounded-xl mx-10 mt-2"
+				style={{ backgroundImage: `url(${bgImage})`, backgroundSize: "cover" }}
+			>
 				<Form
 					onClickSubmission={formSubmission}
 					error={err}
@@ -65,9 +68,13 @@ function App() {
 					handleTextInputChange={handleTextInputChange}
 					handleUrlInputChange={handleUrlInputChange}
 				/>
-				<Directions />
 			</div>
-			<Spotify songs={songs} />
+			<div
+				className="gap-10 px-10 py-10 rounded-xl mx-10 mt-5"
+				style={{ backgroundImage: `url(${songBG})`, backgroundSize: "cover" }}
+			>
+				<Spotify songs={songs} />
+			</div>
 		</div>
 	);
 }
