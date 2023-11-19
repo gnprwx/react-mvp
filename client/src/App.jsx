@@ -33,6 +33,10 @@ function App() {
 		}
 	};
 
+  const handleOnError = () => {
+		setErr(false);
+	};
+
 	const fetchSongs = async () => {
 		try {
 			const response = await axios.get("/api/songs");
@@ -45,10 +49,6 @@ function App() {
 	useEffect(() => {
 		fetchSongs();
 	}, []);
-
-	const handleOnError = () => {
-		setErr(false);
-	};
 
 	return (
 		<div className="min-h-[100dvh] mx-auto bg-indigo-950/70">
@@ -64,7 +64,7 @@ function App() {
 					handleUrlInputChange={handleUrlInputChange}
 				/>
 			</div>
-			<div className="pt-5 mx-10 max-w-7xl mx-auto">
+			<div className="pt-10 mx-10 max-w-7xl mx-auto">
 				<Spotify songs={songs} />
 			</div>
 		</div>
