@@ -6,9 +6,7 @@ const Spotify = ({ songs }) => {
 			{songs.map((song) => {
 				return (
 					<div key={song.id}>
-						<div>
-							<Widget songID={song.url} />
-						</div>
+						<Widget songID={song.url} />
 						<Recommend text={song.text} />
 					</div>
 				);
