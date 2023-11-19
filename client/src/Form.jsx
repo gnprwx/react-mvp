@@ -18,7 +18,7 @@ const Form = ({
 					className="block mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
 					htmlFor="spotify"
 				>
-					spotify url:
+					spotify song url:
 				</label>
 				<input
 					className="p-2.5 w-full text-sm text-gray-900 bg-slate-900 border-4 border-slate-300 placeholder-gray-300 text-white mb-2"
@@ -35,7 +35,7 @@ const Form = ({
 					className="block mb-1 text-white after:content-['*'] after:ml-0.5 after:text-red-400"
 					htmlFor="recommendation"
 				>
-					describe song:
+					describe recommendation:
 				</label>
 				<textarea
 					className="p-2.5 w-full text-sm text-gray-900 bg-slate-900 border-4 border-slate-300 placeholder-gray-300 text-white mb-2"
