@@ -9,16 +9,19 @@ await client.connect();
 
 app.use(express.json());
 
-app.get("/api/songs", (_, res, next) => {
-	client
-		.query("SELECT * FROM songs ORDER BY id DESC")
-		.then((data) => res.send(data.rows))
-		.catch(next);
-});
+const getSongs = async (_, res, next) => {
+	try {
+		const request = await client.query("SELECT * FROM songs ORDER BY id DESC");
+		const data = await request;
+		res.send(data.rows);
+	} catch (error) {
+		next(error);
+	}
+};
 
 const postSongs = async (req, res, next) => {
-	const { url, text } = req.body;
-	try {
+  try {
+    const { url, text } = req.body;
 		await client.query(`INSERT INTO songs(url,text) VALUES($1, $2)`, [
 			url,
 			text,
@@ -29,6 +32,7 @@ const postSongs = async (req, res, next) => {
 	}
 };
 
+app.get("/api/songs", getSongs);
 app.post("/api/songs", postSongs);
 
 app.use((_, res) => {
