@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
-import bgImage from "./assets/bg.png";
-import songBG from "./assets/song-bg.png";
 import logo from "./assets/logo.png";
 
 function App() {
