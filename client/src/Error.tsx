@@ -1,3 +1,4 @@
+import React from "react";
 const Error = ({ error, handleOnError, children }) => {
 	return (
 		<>

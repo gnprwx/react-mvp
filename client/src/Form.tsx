@@ -1,3 +1,4 @@
+import React from "react";
 const Form = ({
 	onClickSubmission,
 	urlValue,
@@ -36,8 +37,8 @@ const Form = ({
 					placeholder="This song is dark and moody..."
 					name="recommendation"
 					id="recommendation"
-					cols="30"
-					rows="2"
+					cols={30}
+					rows={2}
 					maxLength={100}
 					onChange={handleTextInputChange}
 					value={textValue}
