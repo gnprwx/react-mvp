@@ -1,8 +1,11 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
 import Error from "./Error";
+import Header from "./Header";
+import Body from "./Body";
+import Footer from "./Footer";
 import logo from "./assets/logo.png";
 
 function App() {
@@ -56,7 +59,7 @@ function App() {
 			<Error handleOnError={handleOnError} error={err}>
 				<p>This song has already been submitted. Try a different one.</p>
 			</Error>
-			<div className="grid grid-cols-1 2xl:grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-5 px-10 py-5 bg-indigo-900 border-b-2 border-indigo-500 shadow-lg shadow-indigo-500/40">
+			<Header>
 				<img src={logo} alt="logo" className="w-96" />
 				<Form
 					onClickSubmission={handleFormSubmission}
@@ -65,10 +68,13 @@ function App() {
 					handleTextInputChange={handleTextInputChange}
 					handleUrlInputChange={handleUrlInputChange}
 				/>
-			</div>
-			<div className="mx-auto 2xl:max-w-[1440px] sm:max-w-7xl px-5 pt-10">
+			</Header>
+			<Body>
 				<Spotify songs={songs} />
-			</div>
+			</Body>
+			<Footer>
+				~/p
+			</Footer>
 		</div>
 	);
 }
