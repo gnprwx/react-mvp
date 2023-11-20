@@ -11,7 +11,7 @@ const Form = ({
 	return (
 		<div>
 			<form
-				className="mx-auto 2xl:w-1/3 lg:w-3/4 flex flex-col sm:w-3/4"
+				className="sm:w-[450px] flex flex-col"
 				onSubmit={onClickSubmission}
 			>
 				<label
