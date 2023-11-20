@@ -15,7 +15,7 @@ app.post("/api/songs", postSongs);
 async function getSongs(_, res, next) {
 	try {
 		const request = await client.query(
-			"SELECT * FROM songs ORDER BY RANDOM() LIMIT 20"
+			"SELECT * FROM songs ORDER BY RANDOM() LIMIT 10"
 		);
 		const data = await request;
 		res.send(data.rows);
