@@ -1,5 +1,4 @@
-import React from "react";
-const Widget = ({ songID }) => {
+const Widget = ({ songID }: { songID: string }) => {
 	return (
 		<iframe
 			src={`https://open.spotify.com/embed/track/${songID}`}

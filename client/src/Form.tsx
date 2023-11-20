@@ -1,11 +1,17 @@
-import React from "react";
+type FormProps = {
+	onClickSubmission: (e: React.FormEvent<HTMLFormElement>) => void,
+	urlValue: string,
+	textValue: string,
+	handleUrlInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+	handleTextInputChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+}
 const Form = ({
 	onClickSubmission,
 	urlValue,
 	textValue,
 	handleUrlInputChange,
 	handleTextInputChange,
-}) => {
+}: FormProps) => {
 	return (
 		<div>
 			<form className="sm:w-[450px] flex flex-col" onSubmit={onClickSubmission}>
