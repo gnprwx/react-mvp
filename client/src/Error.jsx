@@ -1,12 +1,12 @@
-const Error = ({ error, handleOnError }) => {
+const Error = ({ error, handleOnError, children }) => {
 	return (
 		<>
 			{error && (
 				<div
-					className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4"
+					className="bg-red-100 text-center border border-red-400 text-red-700 px-4 py-3 rounded relative"
 					role="alert"
 				>
-					<p>This song has already been submitted. Try a different one.</p>
+					{children}
 					<span className="absolute top-0 bottom-0 right-0">
 						<svg
 							className="fill-current h-6 w-6 text-red-500"
