@@ -11,7 +11,9 @@ app.use(express.json());
 
 const getSongs = async (_, res, next) => {
 	try {
-		const request = await client.query("SELECT * FROM songs ORDER BY id DESC");
+		const request = await client.query(
+			"SELECT * FROM songs ORDER BY RANDOM() LIMIT 20"
+		);
 		const data = await request;
 		res.send(data.rows);
 	} catch (error) {
