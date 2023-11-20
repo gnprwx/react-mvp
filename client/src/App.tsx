@@ -3,7 +3,7 @@ import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
 import Error from "./Error";
-import logo from "./logo.png";
+import logo from "./assets/logo.png";
 
 function App() {
 	const [songs, setSongs] = useState([]);
