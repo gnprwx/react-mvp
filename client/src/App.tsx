@@ -11,14 +11,6 @@ function App() {
 	const [urlValue, setUrlValue] = useState("");
 	const [textValue, setTextValue] = useState("");
 
-	const handleUrlInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setUrlValue(e.target.value);
-	};
-
-	const handleTextInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setTextValue(e.target.value);
-	};
-
 	const handleFormSubmission = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		let url = urlValue.slice(31, 53);
@@ -32,6 +24,14 @@ function App() {
 		} catch (error) {
 			setErr(true);
 		}
+	};
+
+	const handleUrlInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setUrlValue(e.target.value);
+	};
+
+	const handleTextInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+		setTextValue(e.target.value);
 	};
 
 	const handleOnError = () => {
