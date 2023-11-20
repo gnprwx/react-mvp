@@ -1,6 +1,6 @@
 # SONGIFICATION
 ## Tech
-React, Typescript (Front End), Express (Back End), Axios(Front End), Vite
+React, Typescript(Front End), Express(Back End), Axios(Front End), Vite
 ## About
 Songification is an anonymous song recommendation board that shows 12 random Spotify songs submitted by users. More song recommendations can be curated by simply refreshing the page. I did not create the widget; I am using the widget created by Spotify to power the listening experience on the site.
 ## Functionality
