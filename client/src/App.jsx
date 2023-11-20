@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
+import Error from "./Error";
 import logo from "./assets/logo.png";
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
 		}
 	};
 
-  const handleOnError = () => {
+	const handleOnError = () => {
 		setErr(false);
 	};
 
@@ -52,18 +53,21 @@ function App() {
 
 	return (
 		<div className="min-h-[100dvh] mx-auto bg-indigo-950/70">
+			<Error handleOnError={handleOnError} error={err}>
+				<p>This song has already been submitted. Try a different one.</p>
+			</Error>
 			<div className="grid grid-cols-1 2xl:grid-cols-1 lg:grid-cols-2 justify-items-center gap-5 px-10 py-5 bg-indigo-900 items-center border-b-2 border-indigo-500 shadow-lg shadow-indigo-500/40">
 				<img src={logo} alt="logo" className="w-96" />
 				<Form
 					onClickSubmission={handleFormSubmission}
-					error={err}
-					handleOnError={handleOnError}
 					urlValue={urlValue}
 					textValue={textValue}
 					handleTextInputChange={handleTextInputChange}
 					handleUrlInputChange={handleUrlInputChange}
 				/>
-				<p className="text-xl italic font-semibold text-gray-900 dark:text-white">Discover 20 random songs by users like you!</p>
+				<p className="text-xl italic font-semibold text-gray-900 dark:text-white">
+					Discover 20 random songs by users like you!
+				</p>
 			</div>
 			<div className="pt-10 mx-10 max-w-7xl mx-auto">
 				<Spotify songs={songs} />
