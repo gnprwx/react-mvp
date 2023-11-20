@@ -66,7 +66,7 @@ function App() {
 					handleUrlInputChange={handleUrlInputChange}
 				/>
 			</div>
-			<div className=" mx-10 max-w-7xl mx-auto pt-5">
+			<div className="mx-auto 2xl:max-w-[1440px] sm:max-w-7xl px-5 pt-10">
 				<Spotify songs={songs} />
 			</div>
 		</div>
