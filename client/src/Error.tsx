@@ -1,5 +1,10 @@
-import React from "react";
-const Error = ({ error, handleOnError, children }) => {
+import { ReactNode } from "react";
+type ErrorProps = {
+	error: boolean,
+	handleOnError: () => void,
+	children: ReactNode
+}
+const Error = ({ error, handleOnError, children }: ErrorProps) => {
 	return (
 		<>
 			{error && (
