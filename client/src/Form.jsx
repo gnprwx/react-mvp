@@ -38,7 +38,7 @@ const Form = ({
 					id="recommendation"
 					cols="30"
 					rows="2"
-					maxLength={80}
+					maxLength={100}
 					onChange={handleTextInputChange}
 					value={textValue}
 					required
