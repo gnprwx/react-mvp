@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import Spotify from "./Spotify";
@@ -11,15 +11,15 @@ function App() {
 	const [urlValue, setUrlValue] = useState("");
 	const [textValue, setTextValue] = useState("");
 
-	const handleUrlInputChange = (e) => {
+	const handleUrlInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setUrlValue(e.target.value);
 	};
 
-	const handleTextInputChange = (e) => {
+	const handleTextInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setTextValue(e.target.value);
 	};
 
-	const handleFormSubmission = async (e) => {
+	const handleFormSubmission = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		let url = urlValue.slice(31, 53);
 		let text = textValue;

@@ -1,21 +1,28 @@
 {
-  "name": "react-mvp",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "workspaces": [
-    "server",
-    "client"
-  ],
-  "scripts": {
-    "dev": "concurrently \"npm:dev:*\"",
-    "dev:client": "npm run dev --workspace=client",
-    "dev:server": "npm run dev --workspace=server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "concurrently": "^8.2.2"
-  }
+	"name": "react-mvp",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "index.js",
+	"workspaces": [
+		"server",
+		"client"
+	],
+	"scripts": {
+		"dev": "concurrently \"npm:dev:*\"",
+		"dev:client": "npm run dev --workspace=client",
+		"dev:server": "npm run dev --workspace=server"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^8.2.2"
+	},
+	"devDependencies": {
+		"@types/axios": "^0.14.0",
+		"@types/node": "^20.9.2",
+		"@types/react": "^18.2.37",
+		"@types/react-dom": "^18.2.15",
+		"typescript": "^5.3.2"
+	}
 }
