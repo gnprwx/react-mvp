@@ -9,7 +9,10 @@ await client.connect();
 
 app.use(express.json());
 
-const getSongs = async (_, res, next) => {
+app.get("/api/songs", getSongs);
+app.post("/api/songs", postSongs);
+
+async function getSongs(_, res, next) {
 	try {
 		const request = await client.query(
 			"SELECT * FROM songs ORDER BY RANDOM() LIMIT 20"
@@ -19,9 +22,9 @@ const getSongs = async (_, res, next) => {
 	} catch (error) {
 		next(error);
 	}
-};
+}
 
-const postSongs = async (req, res, next) => {
+async function postSongs(req, res, next) {
 	try {
 		const { url, text } = req.body;
 		await client.query(`INSERT INTO songs(url,text) VALUES($1, $2)`, [
@@ -32,10 +35,7 @@ const postSongs = async (req, res, next) => {
 	} catch (error) {
 		next(error);
 	}
-};
-
-app.get("/api/songs", getSongs);
-app.post("/api/songs", postSongs);
+}
 
 app.use((_, res) => {
 	res.sendStatus(404);
