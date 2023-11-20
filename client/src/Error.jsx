@@ -7,7 +7,7 @@ const Error = ({ error, handleOnError, children }) => {
 					role="alert"
 				>
 					{children}
-					<span className="absolute top-0 bottom-0 right-0">
+					<span className="absolute top-0.5 bottom-0 right-0.5">
 						<svg
 							className="fill-current h-6 w-6 text-red-500"
 							role="button"
