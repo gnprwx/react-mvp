@@ -56,7 +56,7 @@ function App() {
 			<Error handleOnError={handleOnError} error={err}>
 				<p>This song has already been submitted. Try a different one.</p>
 			</Error>
-			<div className="grid grid-cols-1 2xl:grid-cols-1 lg:grid-cols-2 justify-items-center gap-5 px-10 py-5 bg-indigo-900 items-center border-b-2 border-indigo-500 shadow-lg shadow-indigo-500/40">
+			<div className="grid grid-cols-1 2xl:grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-5 px-10 py-5 bg-indigo-900 border-b-2 border-indigo-500 shadow-lg shadow-indigo-500/40">
 				<img src={logo} alt="logo" className="w-96" />
 				<Form
 					onClickSubmission={handleFormSubmission}
@@ -65,11 +65,8 @@ function App() {
 					handleTextInputChange={handleTextInputChange}
 					handleUrlInputChange={handleUrlInputChange}
 				/>
-				<p className="text-xl italic font-semibold text-gray-900 dark:text-white">
-					Discover 20 random songs by users like you!
-				</p>
 			</div>
-			<div className="pt-10 mx-10 max-w-7xl mx-auto">
+			<div className=" mx-10 max-w-7xl mx-auto pt-5">
 				<Spotify songs={songs} />
 			</div>
 		</div>
