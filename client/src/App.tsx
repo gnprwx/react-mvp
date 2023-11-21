@@ -43,7 +43,7 @@ function App() {
 
 	const fetchSongs = async () => {
 		try {
-			const response = await axios.get("/api/songs");
+			const response = await axios.get("api/songs");
 			setSongs(response.data);
 		} catch (err) {
 			console.error(err);
