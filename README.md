@@ -2,7 +2,7 @@
 
 ## Tech
 
-- Front End: Typescript, React, Axios, Vite
+- Front End: Typescript, React, Tailwind CSS, Axios, Vite
 - Back End: Javascript, Express, postgreSQL
 
 ## About
