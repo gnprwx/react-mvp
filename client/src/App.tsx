@@ -70,7 +70,7 @@ function App() {
 				/>
 			</Header>
 			<Body>
-				{songs.length !== 0 ? <Spotify songs={songs} /> : <p className="pb-8 font-bold leading-none text-center text-2xl rounded-full animate-pulse text-indigo-100">LOADING...</p>}
+				{songs.length !== 0 ? <Spotify songs={songs} /> : <p className="pb-8 font-bold leading-none text-center text-2xl text-indigo-100">LOADING DATABASE</p>}
 			</Body>
 			<Footer>
 				~/p
