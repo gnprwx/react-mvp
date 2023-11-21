@@ -1,4 +1,5 @@
 # SONGIFICATION
+[https://songification.onrender.com/](https://songification.onrender.com/)
 
 ## Tech
 
@@ -11,9 +12,9 @@ Songification is an anonymous song recommendation board that shows 12 random Spo
 
 ## Responsive Design
 
-- High Resolution: Three columns of four songs.
-- Between: Two columns of six songs.
-- Mobile: One column of twelve songs.
+- High Resolution: 4x3 grid.
+- Between: 6x2 grid.
+- Mobile: 12x1 grid.
 
 ## Functionality
 
