@@ -11,7 +11,7 @@ Songification is an anonymous song recommendation board that shows 12 random Spo
 
 ## Responsive Design
 
-- High-DPI: Three columns of four songs.
+- High Resolution: Three columns of four songs.
 - Between: Two columns of six songs.
 - Mobile: One column of twelve songs.
 
