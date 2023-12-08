@@ -1,5 +1,5 @@
 # SONGIFICATION
-[https://songification.onrender.com/](https://songification.onrender.com/)
+<img src="./client/public/preview.png" alt="drawing" width="600"/>
 
 ## Tech
 
@@ -25,7 +25,3 @@ If you do not have a Spotify account, you can listen to the 30 second previews. 
 **Right-click song** in Spotify -> **Share** -> **Copy Song Link**.
 
 <img src="./client/public/howto.png" alt="drawing" width="600"/>
-
-## Preview
-
-<img src="./client/public/preview.png" alt="drawing" width="600"/>
